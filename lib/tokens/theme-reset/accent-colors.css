@@ -1,0 +1,70 @@
+/* :root,.radix-themes, .light, .light-theme {
+  --accent-1: var(--colors-primary-1);
+  --accent-2: var(--colors-primary-2);
+  --accent-3: var(--colors-primary-3);
+  --accent-4: var(--colors-primary-4);
+  --accent-5: var(--colors-primary-5);
+  --accent-6: var(--colors-primary-6);
+  --accent-7: var(--colors-primary-7);
+  --accent-8: var(--colors-primary-8);
+  --accent-9: var(--colors-primary-9);
+  --accent-10: var(--colors-primary-10);
+  --accent-11: var(--colors-primary-11);
+  --accent-12: var(--colors-primary-12);
+
+  --accent-a1: var(--colors-primary-alpha-1);
+  --accent-a2: var(--colors-primary-alpha-2);
+  --accent-a3: var(--colors-primary-alpha-3);
+  --accent-a4: var(--colors-primary-alpha-4);
+  --accent-a5: var(--colors-primary-alpha-5);
+  --accent-a6: var(--colors-primary-alpha-6);
+  --accent-a7: var(--colors-primary-alpha-7);
+  --accent-a8: var(--colors-primary-alpha-8);
+  --accent-a9: var(--colors-primary-alpha-9);
+  --accent-a10: var(--colors-primary-alpha-10);
+  --accent-a11: var(--colors-primary-alpha-11);
+  --accent-a12: var(--colors-primary-alpha-12);
+
+  --accent-contrast: var(--tokens-colors-accent-contrast);
+  --accent-surface: var(--tokens-colors-accent-surface);
+  --accent-indicator: var(--colors-primary-9);
+  --accent-track: var(--colors-primary-9);
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root, .light, .light-theme {
+      --accent-1: oklch(99.3% 0.0039 202.7);
+      --accent-2: oklch(98.1% 0.0086 202.7);
+      --accent-3: oklch(95.9% 0.0255 202.7);
+      --accent-4: oklch(93.3% 0.0395 202.7);
+      --accent-5: oklch(90% 0.0511 202.7);
+      --accent-6: oklch(85.7% 0.0615 202.7);
+      --accent-7: oklch(80.1% 0.0743 202.7);
+      --accent-8: oklch(72.4% 0.0967 202.7);
+      --accent-9: oklch(59.9% 0.1005 202.7);
+      --accent-10: oklch(55.6% 0.1102 202.7);
+      --accent-11: oklch(53.4% 0.1005 202.7);
+      --accent-12: oklch(32.9% 0.0476 202.7);
+
+      --accent-a1: color(display-p3 0.0235 0.7569 0.7569 / 0.016);
+      --accent-a2: color(display-p3 0.0196 0.6471 0.6471 / 0.044);
+      --accent-a3: color(display-p3 0.0039 0.6706 0.7412 / 0.106);
+      --accent-a4: color(display-p3 0.0039 0.6706 0.7569 / 0.177);
+      --accent-a5: color(display-p3 0.0039 0.6314 0.698 / 0.244);
+      --accent-a6: color(display-p3 0.0039 0.5647 0.6353 / 0.322);
+      --accent-a7: color(display-p3 0.0039 0.5216 0.5843 / 0.424);
+      --accent-a8: color(display-p3 0 0.5059 0.5608 / 0.581);
+      --accent-a9: color(display-p3 0 0.4118 0.4588 / 0.746);
+      --accent-a10: color(display-p3 0 0.3725 0.4235 / 0.773);
+      --accent-a11: color(display-p3 0 0.3451 0.3882 / 0.789);
+      --accent-a12: color(display-p3 0 0.1333 0.149 / 0.887);
+
+      --accent-contrast: var(--tokens-colors-accent-contrast);
+      --accent-surface: color(display-p3 0.9451 0.9765 0.9804 / 0.8);
+      --accent-indicator: oklch(59.9% 0.1005 202.7);
+      --accent-track: oklch(59.9% 0.1005 202.7);
+    }
+  }
+}
+ */

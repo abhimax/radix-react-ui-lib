@@ -16,8 +16,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'lib/index.ts'),
-      name: 'canopy-ui',
-      fileName: 'canopy-ui',
+      name: 'radix-react-ui-lib',
+      fileName: 'radix-react-ui-lib',
       formats: ['es', 'umd'],
     },
     rollupOptions: {
