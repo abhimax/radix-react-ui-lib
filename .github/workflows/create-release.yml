@@ -73,7 +73,7 @@ jobs:
     name: Validate Lib
     needs: validate_inputs
 
-    uses: ./.github/workflows/validate-project-template.yml@
+    uses: ./.github/workflows/validate-project-template.yml
     with:
       NODE_VERSION: "20"
     secrets:
