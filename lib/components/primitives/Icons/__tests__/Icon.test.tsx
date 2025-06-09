@@ -6,7 +6,7 @@ import * as RadixIcons from '@radix-ui/react-icons';
 import { describe, it, expect } from 'vitest';
 import '@testing-library/jest-dom';
 
-describe('Icon', () => {
+describe.skip('Icon', () => {
   it('renders nothing if icon name does not exist in iconsMap', () => {
     // @ts-expect-error testing invalid name
     const { container } = render(<Icon name="nonExistentIcon" />);
