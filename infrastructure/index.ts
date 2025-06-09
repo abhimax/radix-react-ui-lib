@@ -15,7 +15,7 @@ async function stack() {
     : "";
   const stackName = `radix-uixw-${envName}${namespace}`;
 
-  const stack = new StoryBookStack(app, stackName, {
+  new StoryBookStack(app, stackName, {
     // AWS Account and Region implied by the current CLI configuration.
     env: { account: "826406658508", region: "us-east-1" },
     envName,
