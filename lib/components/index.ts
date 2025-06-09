@@ -1,7 +1,7 @@
 import "@radix-ui/themes/tokens.css";
 import "@radix-ui/themes/components.css";
 // token replacements
-//import "../tokens/token-main.css";
+import "../tokens/token-main.css";
 
 import "@radix-ui/themes/utilities.css";
 

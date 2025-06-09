@@ -1,1 +1,1 @@
-{"root":["./lib/index.ts","./lib/components/index.ts","./lib/components/extended/agenda/agenda.stories.tsx","./lib/components/extended/agenda/agendacomponent.tsx","./lib/components/extended/agenda/simpleapptcardtemplate.tsx","./lib/components/extended/agenda/__tests__/agendacomponent.test.tsx","./lib/components/extended/agenda/__tests__/simpleapptcardtemplate.test.tsx","./types/global.d.ts","./types/index.d.ts"],"version":"5.7.3"}
+{"root":["./lib/index.ts","./lib/components/index.ts","./types/global.d.ts","./types/index.d.ts"],"version":"5.7.3"}

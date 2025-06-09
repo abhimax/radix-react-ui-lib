@@ -1,3 +1,6 @@
-/* :root, .light, .light-theme, .radix-themes {
-    --color-background: var(--tokens-colors-accent-contrast);
-  } */
+:root,
+.light,
+.light-theme,
+.radix-themes {
+  --color-background: var(--tokens-colors-accent-contrast);
+}

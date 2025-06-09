@@ -308,6 +308,6 @@ export const Usage: Story = {
     children: "Radix React UI",
     width: "100px",
     height: "100px",
-    style: { backgroundColor:"#3358d4" },
+    style: { backgroundColor: "#0695a7" },
   },
 };
