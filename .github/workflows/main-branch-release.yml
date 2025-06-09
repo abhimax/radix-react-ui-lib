@@ -1,0 +1,18 @@
+name: Main Branch Releases
+run-name: Main Branch Releases
+on:
+  push:
+    branches:
+      - main
+      - test-main-release
+
+jobs:
+  create_release:
+    uses: ./.github/workflows/create-release.yml
+    with:
+      RELEASE_LIBRARY: true
+      RELEASE_STORYBOOK: true
+      NODE_VERSION: "20"
+    secrets:
+      CDK_AWS_ACCESS_KEY_ID: ${{ secrets.CDK_AWS_ACCESS_KEY_ID }}
+      CDK_AWS_SECRET_ACCESS_KEY: ${{ secrets.CDK_AWS_SECRET_ACCESS_KEY }}

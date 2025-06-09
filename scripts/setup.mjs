@@ -1,0 +1,1 @@
+await $({ stdio: 'inherit' })`npm ci`;
