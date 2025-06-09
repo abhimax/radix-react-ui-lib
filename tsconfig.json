@@ -24,7 +24,6 @@
   "exclude": [
     "node_modules",
     "dist",
-    "lib/components/primitives",
     "test-app/**/*"
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "app": "tsx infrastructure/index.ts",
+  "context": {
+    "DEV": {
+      "CDK_ACCOUNT": "826406658508",
+      "CDK_REGION": "us-east-1"
+    }
+  }
+}
