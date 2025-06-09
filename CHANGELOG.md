@@ -1,0 +1,24 @@
+# Radix React UI Component Library Changelog
+
+# 1.0.0 (2025-06-09)
+
+
+### Bug Fixes
+
+* add more github permissions to the workflow ([0ca354f](https://github.com/abhimax/radix-react-ui-lib/commit/0ca354fa139bcb32c9d0c3bace8849e6e2be2836))
+* add permissions to the main branch workflow file ([ac231e7](https://github.com/abhimax/radix-react-ui-lib/commit/ac231e7e09e8425deec199fdea56968e69445a23))
+* exclude lib/components/primitives from TypeScript compilation ([9daa50b](https://github.com/abhimax/radix-react-ui-lib/commit/9daa50b610b68bd651b20c2af759264ee02c0c98))
+* fix workflow dependency issue ([bcf4da2](https://github.com/abhimax/radix-react-ui-lib/commit/bcf4da2cdae631f3ce47edb61bb63e3ec9eb8080))
+* fixed login issue to the codeartifact ([31e8e55](https://github.com/abhimax/radix-react-ui-lib/commit/31e8e55ce3ce20d75a71b98bc4d329e932ef86de))
+* remove unnecessary version specifier in validate-project-template workflow ([1b06835](https://github.com/abhimax/radix-react-ui-lib/commit/1b0683507f25b04aefe62ec6e5de35e8e3c59afe))
+
+
+### Features
+
+* add GitHub Actions workflows for building, validating, and releasing the project ([b45b773](https://github.com/abhimax/radix-react-ui-lib/commit/b45b773c9b520f2968ef176c4eb2abf765328ff2))
+* add radix react ui components ([636e7d9](https://github.com/abhimax/radix-react-ui-lib/commit/636e7d9f7d838f9080a32ca78db240282ef07d05))
+* add semantic release configuration for automated versioning and changelog generation ([8853ebb](https://github.com/abhimax/radix-react-ui-lib/commit/8853ebb39f9b0d00df7eb4ed94a65361a75a5eaf))
+* add storybook files ([c3b6122](https://github.com/abhimax/radix-react-ui-lib/commit/c3b61228b83cffc2d3d2d54d3e81ad834dac3b99))
+* add ts configs ([5c1b747](https://github.com/abhimax/radix-react-ui-lib/commit/5c1b747ec96bf424f30f509b2d0df699802047ad))
+* fetch all tokens from figma ([375e0b3](https://github.com/abhimax/radix-react-ui-lib/commit/375e0b3980c50d223ba922f9d4e5d247ec486b95))
+* vite, vitest configs ([8270e9b](https://github.com/abhimax/radix-react-ui-lib/commit/8270e9bd9b71c45a27cf0543efb8b25aa5d94628))
