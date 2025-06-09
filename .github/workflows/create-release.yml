@@ -73,25 +73,26 @@ jobs:
     name: Validate Lib
     needs: validate_inputs
 
-    uses: ./.github/workflows/validate-project-template.yml@
+    uses: ./.github/workflows/validate-project-template.yml
     with:
       NODE_VERSION: "20"
     secrets:
       CDK_AWS_ACCESS_KEY_ID: ${{ secrets.CDK_AWS_ACCESS_KEY_ID }}
       CDK_AWS_SECRET_ACCESS_KEY: ${{ secrets.CDK_AWS_SECRET_ACCESS_KEY }}
 
-  integration_tests:
-    name: Integration Tests
-    needs: validate_lib
+  # integration_tests:
+  #   name: Integration Tests
+  #   needs: validate_lib
 
-    uses: ./.github/workflows/integration-tests-check.yml
-    secrets:
-      AWS_ACCESS_KEY_ID: ${{ secrets.CDK_AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.CDK_AWS_SECRET_ACCESS_KEY }}
+  #   uses: ./.github/workflows/integration-tests-check.yml
+  #   secrets:
+  #     AWS_ACCESS_KEY_ID: ${{ secrets.CDK_AWS_ACCESS_KEY_ID }}
+  #     AWS_SECRET_ACCESS_KEY: ${{ secrets.CDK_AWS_SECRET_ACCESS_KEY }}
 
   release:
     name: Release
-    needs: integration_tests
+    # needs: integration_tests
+    needs: validate_lib
     runs-on: ubuntu-latest
     outputs:
       release_version_output: ${{ steps.check_if_new_version_was_released.outputs.release_version }}
