@@ -1,5 +1,12 @@
 # Radix React UI Component Library Changelog
 
+## [1.0.1](https://github.com/abhimax/radix-react-ui-lib/compare/v1.0.0...v1.0.1) (2025-06-09)
+
+
+### Bug Fixes
+
+* fix the issue in the deploy script ([b86cee0](https://github.com/abhimax/radix-react-ui-lib/commit/b86cee08a1a3d4b737e7e726f755ac0acc06ec96))
+
 # 1.0.0 (2025-06-09)
 
 
