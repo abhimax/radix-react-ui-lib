@@ -1,19 +1,6 @@
 name: Create Release
 run-name: Create Release
 
-permissions:
-  contents: write
-  id-token: write
-  issues: write
-  discussions: write
-  packages: write
-  pages: write
-  pull-requests: write
-  security-events: write
-  statuses: write
-  checks: write
-  deployments: write
-
 on:
   workflow_dispatch:
     inputs:
