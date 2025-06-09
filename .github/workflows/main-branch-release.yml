@@ -6,6 +6,19 @@ on:
       - main
       - test-main-release
 
+permissions:
+  contents: write
+  id-token: write
+  issues: write
+  discussions: write
+  packages: write
+  pages: write
+  pull-requests: write
+  security-events: write
+  statuses: write
+  checks: write
+  deployments: write
+
 jobs:
   create_release:
     uses: ./.github/workflows/create-release.yml
