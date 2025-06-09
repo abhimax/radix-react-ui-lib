@@ -92,6 +92,7 @@ jobs:
   release:
     name: Release
     # needs: integration_tests
+    needs: validate_lib
     runs-on: ubuntu-latest
     outputs:
       release_version_output: ${{ steps.check_if_new_version_was_released.outputs.release_version }}
