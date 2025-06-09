@@ -1,7 +1,7 @@
 #!/usr/bin/env zx
 import path from 'path'
 
-const env = process.env.ENV
+const env = "DEV"
 
 // Read the environment variable values from the JSON file
 const envVarsPath = path.join(__dirname, `../configurations/${env}.config.json`)

@@ -1,0 +1,48 @@
+name: Integration Tests Check
+run-name: Integration Tests Check
+on:
+  workflow_call:
+    inputs:
+      NODE_VERSION:
+        required: false
+        type: string
+        default: '20'
+        description: NodeJS version
+    secrets:
+      AWS_ACCESS_KEY_ID:
+        required: true
+      AWS_SECRET_ACCESS_KEY:
+        required: true
+
+jobs:
+  integration_tests:
+    name: Integration Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.NODE_VERSION }}
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Setup Library
+        run: |
+          npm i -g zx
+          zx ./scripts/setup.mjs
+
+      - name: Setup Test App
+        working-directory: ./test-app
+        run: zx ./scripts/setup.mjs
+
+      - name: Integration Tests
+        working-directory: ./test-app
+        run: npm run test:cached
