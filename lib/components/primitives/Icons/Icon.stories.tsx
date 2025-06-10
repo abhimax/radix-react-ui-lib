@@ -49,10 +49,11 @@ export const Sizes: Story = {
 export const IconGallery: Story = {
   render: () => (
     <div style={{ 
-      display: 'grid', 
-      gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
-      gap: '1rem',
+      display: 'flex', 
+      flexWrap: 'wrap',
+      gap: '0.5rem',
       padding: '1rem',
+      justifyContent: 'flex-start',
     }}>
       {Object.keys(RadixIcons).map((iconName) => (
         <div
@@ -61,14 +62,36 @@ export const IconGallery: Story = {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            justifyContent: 'center',
             gap: '0.5rem',
             padding: '1rem',
             border: '1px solid #eee',
             borderRadius: '4px',
+            width: '200px',
+            backgroundColor: '#fff',
+            transition: 'all 0.2s ease',
+            cursor: 'pointer',
+          }}
+          onMouseOver={(e) => {
+            const target = e.currentTarget;
+            target.style.backgroundColor = '#f9f9f9';
+            target.style.transform = 'translateY(-2px)';
+            target.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+          }}
+          onMouseOut={(e) => {
+            const target = e.currentTarget;
+            target.style.backgroundColor = '#fff';
+            target.style.transform = 'none';
+            target.style.boxShadow = 'none';
           }}
         >
-          <Icon name={iconName as keyof typeof RadixIcons} size={24} />
-          <span style={{ fontSize: '12px', textAlign: 'center' }}>{iconName}</span>
+          <Icon name={iconName as keyof typeof RadixIcons} size={32} />
+          <span style={{ 
+            fontSize: '12px', 
+            textAlign: 'center',
+            color: '#666',
+            fontWeight: 500
+          }}>{iconName}</span>
         </div>
       ))}
     </div>

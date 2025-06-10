@@ -22,6 +22,7 @@ export default defineConfig({
         '**/vitest.workspace.ts',
         '**/test-app/**',
         '**/style-dictionary-config.js',
+        '**/infrastructure/**',
       ],
       reporter: ['text', 'json', 'html', 'lcov'],
     },
