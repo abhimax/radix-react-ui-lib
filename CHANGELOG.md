@@ -1,5 +1,18 @@
 # Radix React UI Component Library Changelog
 
+# [1.1.0](https://github.com/abhimax/radix-react-ui-lib/compare/v1.0.1...v1.1.0) (2025-06-10)
+
+
+### Bug Fixes
+
+* icon test issue fix ([a0af2a2](https://github.com/abhimax/radix-react-ui-lib/commit/a0af2a26ac65b83f6abe9eeb9818f60eaf9e969b))
+* radix icon's lint issue ([bade033](https://github.com/abhimax/radix-react-ui-lib/commit/bade0331b4423ba670e2d16fc5f125e37ab3b1dc))
+
+
+### Features
+
+* improve icon stories ([71769d0](https://github.com/abhimax/radix-react-ui-lib/commit/71769d0f50677def349e3a342ed7569bbc02b99a))
+
 ## [1.0.1](https://github.com/abhimax/radix-react-ui-lib/compare/v1.0.0...v1.0.1) (2025-06-09)
 
 
