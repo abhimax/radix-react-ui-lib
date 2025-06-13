@@ -26,6 +26,16 @@ export const Scheduler: React.FC<SchedulerProps> = ({ events: initialEvents = de
     setEvents(updatedEvents);
   };
 
+  const handleEventResize = ({ event, start, end }: { event: Event; start: Date; end: Date }) => {
+    const updatedEvents = events.map((e) => {
+      if (e === event) {
+        return { ...e, start, end };
+      }
+      return e;
+    });
+    setEvents(updatedEvents);
+  };
+
   return (
     <div style={{ height: 500 }}>
       <DnDCalendar
@@ -39,6 +49,8 @@ export const Scheduler: React.FC<SchedulerProps> = ({ events: initialEvents = de
         views={['month', 'week', 'day']}
         style={{ height: '100%' }}
         onEventDrop={handleEventDrop}
+        onEventResize={handleEventResize}
+        resizable
       />
     </div>
   );
