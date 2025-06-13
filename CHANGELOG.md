@@ -1,5 +1,12 @@
 # Radix React UI Component Library Changelog
 
+## [1.1.1](https://github.com/abhimax/radix-react-ui-lib/compare/v1.1.0...v1.1.1) (2025-06-13)
+
+
+### Bug Fixes
+
+* update readme ([851757a](https://github.com/abhimax/radix-react-ui-lib/commit/851757a93bc96d0f5b85d8b4d7f8d27be7f4215b))
+
 # [1.1.0](https://github.com/abhimax/radix-react-ui-lib/compare/v1.0.1...v1.1.0) (2025-06-10)
 
 
