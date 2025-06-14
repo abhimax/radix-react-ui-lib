@@ -1,5 +1,12 @@
 # Radix React UI Component Library Changelog
 
+## [1.2.4](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.3...v1.2.4) (2025-06-14)
+
+
+### Bug Fixes
+
+* issue with the CSS import from react-big-calendar ([1f0e592](https://github.com/abhimax/radix-react-ui-lib/commit/1f0e59241d21672cb5942e71e994d37c50e41f4a))
+
 ## [1.2.3](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.2...v1.2.3) (2025-06-14)
 
 
