@@ -1,5 +1,12 @@
 # Radix React UI Component Library Changelog
 
+## [1.2.5](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.4...v1.2.5) (2025-06-14)
+
+
+### Bug Fixes
+
+* storybook build in cicd due to rbc addons dragAndDrop ([c3d9521](https://github.com/abhimax/radix-react-ui-lib/commit/c3d9521d9aec9cf77ac6633270c28faf36fd4d77))
+
 ## [1.2.4](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.3...v1.2.4) (2025-06-14)
 
 
