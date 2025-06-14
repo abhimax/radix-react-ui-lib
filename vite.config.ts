@@ -30,6 +30,8 @@ export default defineConfig({
         'react-dom',
         'react/jsx-runtime',
         'react-big-calendar',
+        'react-big-calendar/lib/css/react-big-calendar.css',
+        'react-big-calendar/lib/addons/dragAndDrop/styles.css',
         '@radix-ui/react-icons',
         'luxon',
         '@radix-ui/react-avatar',
@@ -62,5 +64,11 @@ export default defineConfig({
     },
     sourcemap: true,
     outDir: 'dist',
+  },
+  optimizeDeps: {
+    include: [
+      'react-big-calendar/lib/css/react-big-calendar.css',
+      'react-big-calendar/lib/addons/dragAndDrop/styles.css'
+    ],
   },
 });
