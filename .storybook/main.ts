@@ -13,20 +13,37 @@ const config: StorybookConfig = {
   ],
   framework: {
     name: "@storybook/react-vite",
-    options: {
-      builder: {
-        viteConfigPath: 'vite.config.ts',
-      },
-    },
+    options: {}
   },
   docs: {
     autodocs: true,
   },
-  core: {
-    builder: '@storybook/builder-vite',
-  },
   viteFinal: async (config) => {
-    return config;
+    return {
+      ...config,
+      build: {
+        ...config.build,
+        rollupOptions: {
+          ...config.build?.rollupOptions,
+          external: [
+            'react',
+            'react-dom',
+            'react/jsx-runtime',
+            'react-big-calendar',
+            '@radix-ui/react-icons',
+            'luxon',
+            '@radix-ui/react-avatar',
+            '@radix-ui/react-alert-dialog',
+            '@radix-ui/react-slot',
+            '@radix-ui/react-typography',
+            '@radix-ui/themes',
+            'class-variance-authority',
+            'clsx',
+            'tailwind-merge',
+          ],
+        },
+      },
+    };
   },
 };
 
