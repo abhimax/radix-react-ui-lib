@@ -1,5 +1,12 @@
 # Radix React UI Component Library Changelog
 
+## [1.2.3](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.2...v1.2.3) (2025-06-14)
+
+
+### Bug Fixes
+
+* create release workflow build sb issue ([5058c2d](https://github.com/abhimax/radix-react-ui-lib/commit/5058c2d6e8a26918a74bd9b0cfd8ed2f047449e5))
+
 ## [1.2.2](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.1...v1.2.2) (2025-06-14)
 
 
