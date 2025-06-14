@@ -32,6 +32,7 @@ export default defineConfig({
         'react-big-calendar',
         'react-big-calendar/lib/css/react-big-calendar.css',
         'react-big-calendar/lib/addons/dragAndDrop/styles.css',
+        'react-big-calendar/lib/addons/dragAndDrop',
         '@radix-ui/react-icons',
         'luxon',
         '@radix-ui/react-avatar',
@@ -49,6 +50,7 @@ export default defineConfig({
           'react-dom': 'ReactDOM',
           'react/jsx-runtime': 'jsxRuntime',
           'react-big-calendar': 'ReactBigCalendar',
+          'react-big-calendar/lib/addons/dragAndDrop': 'ReactBigCalendarDragAndDrop',
           '@radix-ui/react-icons': 'RadixIcons',
           'luxon': 'Luxon',
           '@radix-ui/react-avatar': 'RadixAvatar',
@@ -68,7 +70,8 @@ export default defineConfig({
   optimizeDeps: {
     include: [
       'react-big-calendar/lib/css/react-big-calendar.css',
-      'react-big-calendar/lib/addons/dragAndDrop/styles.css'
+      'react-big-calendar/lib/addons/dragAndDrop/styles.css',
+      'react-big-calendar/lib/addons/dragAndDrop'
     ],
   },
 });
