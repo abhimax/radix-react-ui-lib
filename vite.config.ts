@@ -9,24 +9,54 @@ import dts from 'vite-plugin-dts';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  plugins: [react(), cssInjectedByJsPlugin(), dts({
-    rollupTypes: true,
-    outDir: 'dist/types'
-  })],
+  plugins: [
+    react(),
+    cssInjectedByJsPlugin(),
+    dts({
+      include: ['lib/**/*.ts', 'lib/**/*.tsx'],
+      exclude: ['lib/**/*.stories.tsx', 'lib/**/*.test.tsx'],
+    }),
+  ],
   build: {
     lib: {
       entry: resolve(__dirname, 'lib/index.ts'),
-      name: 'radix-react-ui-lib',
-      fileName: 'radix-react-ui-lib',
+      name: 'RadixReactUILib',
+      fileName: (format) => `radix-react-ui-lib.${format === 'es' ? 'js' : 'umd.cjs'}`,
       formats: ['es', 'umd'],
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      external: [
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
+        'react-big-calendar',
+        '@radix-ui/react-icons',
+        'luxon',
+        '@radix-ui/react-avatar',
+        '@radix-ui/react-alert-dialog',
+        '@radix-ui/react-slot',
+        '@radix-ui/react-typography',
+        '@radix-ui/themes',
+        'class-variance-authority',
+        'clsx',
+        'tailwind-merge',
+      ],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
-          'react/jsx-runtime': 'react/jsx-runtime',
+          'react/jsx-runtime': 'jsxRuntime',
+          'react-big-calendar': 'ReactBigCalendar',
+          '@radix-ui/react-icons': 'RadixIcons',
+          'luxon': 'Luxon',
+          '@radix-ui/react-avatar': 'RadixAvatar',
+          '@radix-ui/react-alert-dialog': 'RadixAlertDialog',
+          '@radix-ui/react-slot': 'RadixSlot',
+          '@radix-ui/react-typography': 'RadixTypography',
+          '@radix-ui/themes': 'RadixThemes',
+          'class-variance-authority': 'ClassVarianceAuthority',
+          'clsx': 'Clsx',
+          'tailwind-merge': 'TailwindMerge',
         },
       },
     },
