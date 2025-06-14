@@ -5,6 +5,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop';
 import 'react-big-calendar/lib/addons/dragAndDrop/styles.css';
 import { events as defaultEvents } from './storyData';
+import './Scheduler.css';
 
 const localizer = luxonLocalizer(DateTime);
 const DnDCalendar = withDragAndDrop(Calendar);
@@ -37,7 +38,7 @@ export const Scheduler: React.FC<SchedulerProps> = ({ events: initialEvents = de
   };
 
   return (
-    <div style={{ height: 500 }}>
+    <div className="scheduler-container">
       <DnDCalendar
         localizer={localizer}
         events={events}
@@ -47,9 +48,10 @@ export const Scheduler: React.FC<SchedulerProps> = ({ events: initialEvents = de
         tooltipAccessor="desc"
         defaultView="week"
         views={['month', 'week', 'day']}
-        style={{ height: '100%' }}
+        className="calendar"
         onEventDrop={handleEventDrop}
         onEventResize={handleEventResize}
+        eventPropGetter={() => ({ className: 'event' })}
         resizable
       />
     </div>
