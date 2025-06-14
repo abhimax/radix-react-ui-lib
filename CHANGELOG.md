@@ -1,5 +1,12 @@
 # Radix React UI Component Library Changelog
 
+## [1.2.2](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.1...v1.2.2) (2025-06-14)
+
+
+### Bug Fixes
+
+* storybook build error fix ([4dfcb49](https://github.com/abhimax/radix-react-ui-lib/commit/4dfcb4903af1f5c2ba37eee8ef650e7070aade1f))
+
 ## [1.2.1](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.0...v1.2.1) (2025-06-14)
 
 
