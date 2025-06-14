@@ -154,8 +154,7 @@ jobs:
 
       - name: Build Storybook
         if: ${{ inputs.RELEASE_STORYBOOK == true }}
-        run: |
-          npm run build-storybook
+        run: npm run build:storybook
 
       - name: Release Storybook
         if: ${{ inputs.RELEASE_STORYBOOK == true }}
