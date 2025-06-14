@@ -21,3 +21,8 @@
   align-items: center;
   gap: 8px;
 } 
+
+.rbc-toolbar .rbc-btn-group .rbc-active{
+    background-color: var(--colors-primary-custom-9) !important  ;
+    color: var(--colors-semantic-success-1);
+}
