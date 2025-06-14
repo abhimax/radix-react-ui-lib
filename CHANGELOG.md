@@ -1,5 +1,15 @@
 # Radix React UI Component Library Changelog
 
+# [1.2.0](https://github.com/abhimax/radix-react-ui-lib/compare/v1.1.1...v1.2.0) (2025-06-14)
+
+
+### Features
+
+* add drag and drop feature ([9e31c7b](https://github.com/abhimax/radix-react-ui-lib/commit/9e31c7b5d38b26915a2fee1a29077a549584a71a))
+* add resize effect ([e234435](https://github.com/abhimax/radix-react-ui-lib/commit/e2344355e9761f61ab21990de42b4b88a8e21de6))
+* add scheduler component using rbc ([4c657ad](https://github.com/abhimax/radix-react-ui-lib/commit/4c657adb4effb2ccaf731e7876cf8b67d3283093))
+* schedular component dev ([fbd2a9f](https://github.com/abhimax/radix-react-ui-lib/commit/fbd2a9fad1197f7e9304c5d8a3929694a0c6ed24))
+
 ## [1.1.1](https://github.com/abhimax/radix-react-ui-lib/compare/v1.1.0...v1.1.1) (2025-06-13)
 
 
