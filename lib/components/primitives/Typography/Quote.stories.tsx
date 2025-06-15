@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { Quote } from "../../..";
 
 const meta = {
-  title: "Radix React UI/Typography/Quote",
+  title: "Primitives/Typography/Quote",
   component: Quote,
   tags: ["autodocs"],
   parameters: { layout: "centered" },
@@ -34,6 +34,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: "Building with Radix UI is like having a design system that works right out of the box",
+    children:
+      "Building with Radix UI is like having a design system that works right out of the box",
   },
 };

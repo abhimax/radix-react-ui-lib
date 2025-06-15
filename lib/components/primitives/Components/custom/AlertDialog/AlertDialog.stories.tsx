@@ -4,7 +4,7 @@ import { AlertDialog } from "../../../../";
 import { Button } from "@radix-ui/themes";
 
 const meta = {
-  title: "Radix React UI/Components/AlertDialog",
+  title: "Primitives/Components/Custom/AlertDialog",
   component: AlertDialog,
   parameters: {
     layout: "centered",

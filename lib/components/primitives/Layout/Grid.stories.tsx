@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { Grid } from "../..";
 
 const meta = {
-  title: "Radix React UI/Layout/Grid",
+  title: "Primitives/Layout/Grid",
   component: Grid,
   tags: ["autodocs"],
   parameters: { layout: "centered" },
