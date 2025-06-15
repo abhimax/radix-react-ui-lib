@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { render } from "@testing-library/react";
 import { Icon } from "../Icon";
 import { describe, it, expect, vi } from "vitest";
@@ -7,7 +7,7 @@ import "@testing-library/jest-dom";
 // Mock Radix Icons
 vi.mock("@radix-ui/react-icons", () => {
   const mockIcons = {
-    HomeIcon: ({ style, className }: { style?: any; className?: string }) => (
+    HomeIcon: ({ style, className }: { style?: CSSProperties; className?: string }) => (
       <svg
         data-testid="mock-icon"
         width={style?.width}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Calendar, luxonLocalizer, Event } from "react-big-calendar";
 import { DateTime } from "luxon";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import withDragAndDrop from "react-big-calendar/lib/addons/dragAndDrop";
+import withDragAndDrop, { withDragAndDropProps } from "react-big-calendar/lib/addons/dragAndDrop";
 import "react-big-calendar/lib/addons/dragAndDrop/styles.css";
 import { events as defaultEvents } from "./storyData";
 import "./styles/scheduler.css";
@@ -12,6 +12,10 @@ const DnDCalendar = withDragAndDrop(Calendar);
 
 export interface SchedulerProps {
   events?: Event[];
+}
+
+interface ExtendedEvent extends Event {
+  desc?: string;
 }
 
 export const Scheduler: React.FC<SchedulerProps> = ({
@@ -60,15 +64,15 @@ export const Scheduler: React.FC<SchedulerProps> = ({
       <DnDCalendar
         localizer={localizer}
         events={events}
-        startAccessor={(event: any) => new Date(event.start)}
-        endAccessor={(event: any) => new Date(event.end)}
-        titleAccessor={(event: any) => event.title}
-        tooltipAccessor={(event: any) => event.desc || event.title}
+        startAccessor={(event: Event) => event.start ? new Date(event.start) : new Date()}
+        endAccessor={(event: Event) => event.end ? new Date(event.end) : new Date()}
+        titleAccessor={(event: Event) => String(event.title || '')}
+        tooltipAccessor={(event: ExtendedEvent) => String(event.desc || event.title || '')}
         defaultView="week"
         views={["month", "week", "day"]}
         className="calendar"
-        onEventDrop={handleEventDrop as any}
-        onEventResize={handleEventResize as any}
+        onEventDrop={handleEventDrop as withDragAndDropProps['onEventDrop']}
+        onEventResize={handleEventResize as withDragAndDropProps['onEventResize']}
         eventPropGetter={() => ({ className: "event" })}
         resizable
       />
