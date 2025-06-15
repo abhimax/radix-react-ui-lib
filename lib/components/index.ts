@@ -26,3 +26,4 @@ export {
 } from "@radix-ui/themes";
 export { Icon } from "./primitives/Icons/Icon";
 export { AlertDialog } from "./primitives/Components/custom/AlertDialog/";
+export { Scheduler } from "./extended/Scheduler/";
