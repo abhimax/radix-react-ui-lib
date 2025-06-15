@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { Kbd } from "../../..";
 
 const meta = {
-  title: "Radix React UI/Typography/Kbd",
+  title: "Primitives/Typography/Kbd",
   component: Kbd,
   tags: ["autodocs"],
   parameters: { layout: "centered" },

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { Blockquote } from "../../index";
 
 const meta = {
-  title: "Radix React UI/Typography/Blockquote",
+  title: "Primitives/Typography/Blockquote",
   component: Blockquote,
   tags: ["autodocs"],
   parameters: { layout: "centered" },

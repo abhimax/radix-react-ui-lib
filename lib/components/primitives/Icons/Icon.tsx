@@ -1,34 +1,53 @@
 // src/components/Icon.tsx
-import React from 'react';
-import * as RadixIcons from '@radix-ui/react-icons';
+import React from "react";
+import * as Icons from "@radix-ui/react-icons";
 
-export type IconName = keyof typeof RadixIcons;
+export type IconName = keyof typeof Icons;
+
+export type IconSkin =
+  | "primary"
+  | "success"
+  | "error"
+  | "info"
+  | "warning"
+  | "light"
+  | "dark"
+  | "neutral";
 
 export interface IconProps {
   name: IconName;
   size?: number;
-  color?: string;
+  skin?: IconSkin;
   className?: string;
 }
 
-export const Icon = ({ 
-  name, 
-  size = 15, // Radix Icons default size is 15
-  color = 'currentColor',
-  className 
-}: IconProps) => {
-  const IconComponent = RadixIcons[name];
+const skinColors: Record<IconSkin, string> = {
+  primary: "var(--colors-primary-custom-9)",
+  success: "var(--colors-semantic-success-9)",
+  error: "var(--colors-semantic-error-9)",
+  info: "var(--colors-semantic-info-9)",
+  warning: "var(--colors-semantic-warning-9)",
+  light: "var(--colors-default-white)",
+  dark: "var(--colors-default-black)",
+  neutral: "var(--colors-neutral-neutral-9)",
+};
 
-  if (!IconComponent) {
-    console.warn(`Icon "${name}" not found in Radix Icons`);
-    return null;
-  }
+export const Icon: React.FC<IconProps> = ({
+  name,
+  size = 15,
+  skin = "neutral",
+  className,
+}) => {
+  const IconComponent = Icons[name];
 
   return (
-    <IconComponent 
-      width={size} 
-      height={size} 
-      color={color}
+    <IconComponent
+      style={{
+        width: size,
+        height: size,
+        color: skinColors[skin],
+        fill: skinColors[skin],
+      }}
       className={className}
     />
   );

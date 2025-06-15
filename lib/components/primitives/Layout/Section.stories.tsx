@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { Section } from "../..";
 
 const meta = {
-  title: "Radix React UI/Layout/Section",
+  title: "Primitives/Layout/Section",
   component: Section,
   tags: ["autodocs"],
   parameters: { layout: "centered" },
