@@ -29,7 +29,7 @@ vi.mock("react-big-calendar", () => {
     return <div data-testid="calendar">{renderEvents(events)}</div>;
   };
   // Add a mock for luxonLocalizer
-  return { Calendar, luxonLocalizer: () => ({}) as any };
+  return { Calendar, luxonLocalizer: () => ({} as unknown) };
 });
 
 // Mock CSS import
