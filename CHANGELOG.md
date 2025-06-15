@@ -1,5 +1,15 @@
 # Radix React UI Component Library Changelog
 
+## [1.2.6](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.5...v1.2.6) (2025-06-15)
+
+
+### Bug Fixes
+
+* lint issues ([bd3e570](https://github.com/abhimax/radix-react-ui-lib/commit/bd3e57079a9c4cc4f21d87f714ac7d9e3c827567))
+* lint issues ([984369d](https://github.com/abhimax/radix-react-ui-lib/commit/984369d528c4f3307450a3967ff7976fdec9cc1b))
+* scheduler types and improvements ([9fae62e](https://github.com/abhimax/radix-react-ui-lib/commit/9fae62ec7b7ff0c6923dbe0c51691edf6de18292))
+* story file cleanup ([1ed753f](https://github.com/abhimax/radix-react-ui-lib/commit/1ed753f8238356dae932484c089f99b2765359db))
+
 ## [1.2.5](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.4...v1.2.5) (2025-06-14)
 
 
