@@ -1,5 +1,12 @@
 # Radix React UI Component Library Changelog
 
+## [1.2.7](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.6...v1.2.7) (2025-06-22)
+
+
+### Bug Fixes
+
+* remove test branch from main release workflow and update CI/CD documentation ([7af7bd4](https://github.com/abhimax/radix-react-ui-lib/commit/7af7bd4d0b0a00de388ac66bfb90d5c654428a8a))
+
 ## [1.2.6](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.5...v1.2.6) (2025-06-15)
 
 
