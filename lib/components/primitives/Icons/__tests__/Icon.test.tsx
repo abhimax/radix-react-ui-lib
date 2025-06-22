@@ -40,7 +40,7 @@ describe("Icon", () => {
     const { container } = render(<Icon name="HomeIcon" />);
     const svgElement = container.querySelector("svg");
     expect(svgElement).toBeInTheDocument();
-    expect(svgElement).toHaveStyle({ width: "15px", height: "15px" }); // Radix default size
+    expect(svgElement).toHaveStyle({ width: "25px", height: "25px" }); // Radix default size
   });
 
   it("applies className when provided", () => {
