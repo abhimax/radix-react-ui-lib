@@ -1,5 +1,14 @@
 # Radix React UI Component Library Changelog
 
+## [1.2.8-beta.1](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.7...v1.2.8-beta.1) (2025-06-22)
+
+
+### Bug Fixes
+
+* add permissions section to create-release workflow ([7765e65](https://github.com/abhimax/radix-react-ui-lib/commit/7765e653fc6437928d9782d5f4672e5eef594e98))
+* update default icon size in tests to 25px ([7ff4d37](https://github.com/abhimax/radix-react-ui-lib/commit/7ff4d3709bbd8363aad01de2ae0f2448e8cff4c9))
+* update default icon size to 25 ([fd1ed64](https://github.com/abhimax/radix-react-ui-lib/commit/fd1ed64e2343138390b7e3bd421dd4c5cb31fae6))
+
 ## [1.2.7](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.6...v1.2.7) (2025-06-22)
 
 
