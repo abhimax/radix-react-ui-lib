@@ -34,7 +34,7 @@ const skinColors: Record<IconSkin, string> = {
 
 export const Icon: React.FC<IconProps> = ({
   name,
-  size = 15,
+  size = 25,
   skin = "neutral",
   className,
 }) => {
