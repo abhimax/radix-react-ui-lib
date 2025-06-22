@@ -51,6 +51,19 @@ on:
       CDK_AWS_SECRET_ACCESS_KEY:
         required: true
 
+permissions:
+  contents: write
+  id-token: write
+  issues: write
+  discussions: write
+  packages: write
+  pages: write
+  pull-requests: write
+  security-events: write
+  statuses: write
+  checks: write
+  deployments: write
+
 jobs:
   validate_inputs:
     name: Validate Inputs
