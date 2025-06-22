@@ -74,6 +74,34 @@ This section outlines the folder structure and usage of design tokens.
    - **typography.css**: Overrides font styles with synced tokens.
    - **token-main.css**: Imports all of the above CSS files. This file will be included in the build process and added to the final bundle.
 
-   ### CI/CD
+## CI/CD
 
-   TODO..
+This project uses GitHub Actions for continuous integration and delivery. The following workflows are configured:
+
+### About
+- Automated checks and releases are managed via workflows in `.github/workflows/`.
+- Secrets for AWS/CDK and GitHub tokens are required for deployment and release steps.
+
+### Pull Request Checks
+- **Workflow:** `.github/workflows/pull-request-checks.yml`
+- **Trigger:** On every pull request.
+- **Purpose:**
+  - Validates the library using the `validate-project-template.yml` workflow.
+  - Ensures code quality and project integrity before merging.
+
+### Create Release
+- **Workflow:** `.github/workflows/create-release.yml`
+- **Trigger:**
+  - Manually via workflow dispatch (with options for library and/or Storybook release).
+- **Purpose:**
+  - Builds and releases the library using semantic-release for internal testing.
+  - Optionally builds and deploys Storybook.
+  - Publishes release artifacts and outputs release status/version.
+
+### Main Branch Release
+- **Workflow:** `.github/workflows/main-branch-release.yml`
+- **Trigger:** On push to `main` branch.
+- **Purpose:**
+  - Main releases
+
+For more details, see the workflow files in `.github/workflows/`.

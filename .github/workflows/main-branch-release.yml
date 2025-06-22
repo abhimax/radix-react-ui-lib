@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-      - test-main-release
-
 permissions:
   contents: write
   id-token: write
