@@ -15,6 +15,8 @@ export default defineConfig({
     dts({
       include: ['lib/**/*.ts', 'lib/**/*.tsx'],
       exclude: ['lib/**/*.stories.tsx', 'lib/**/*.test.tsx'],
+      outDir: 'dist/types',
+      insertTypesEntry: true,
     }),
   ],
   build: {
