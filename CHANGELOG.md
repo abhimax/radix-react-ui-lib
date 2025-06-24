@@ -1,5 +1,12 @@
 # Radix React UI Component Library Changelog
 
+## [1.2.9](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.8...v1.2.9) (2025-06-24)
+
+
+### Bug Fixes
+
+* ts module export path issue fix ([53beb56](https://github.com/abhimax/radix-react-ui-lib/commit/53beb565486ab636e2c08da12efcf2583e56488f))
+
 ## [1.2.8](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.7...v1.2.8) (2025-06-23)
 
 
