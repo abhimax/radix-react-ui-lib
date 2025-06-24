@@ -20,8 +20,8 @@
   "scripts": {
     "dev": "vite",
     "prebuild": "rm -rf dist",
-    "build": "npx tsc -b && vite build",
-    "build:lib": "npx tsc -b && vite build",
+    "build": "vite build",
+    "build:lib": "vite build",
     "build:storybook": "storybook build",
     "lint": "eslint .",
     "preview": "vite preview",
