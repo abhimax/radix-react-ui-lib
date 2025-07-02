@@ -1,67 +1,61 @@
-import { Event } from "react-big-calendar";
-import { DateTime } from "luxon";
+// Hardcoded event data for Scheduler stories, no external dependencies
+// All dates are in plain JS Date objects
 
-const now = DateTime.now();
-const lastMonth = now.minus({ months: 1 });
-const nextMonth = now.plus({ months: 1 });
-
-export const events: Event[] = [
-  // Last month
+export const events = [
+  // July 2025 events
   {
     title: "Sprint Planning",
-    start: lastMonth.set({ day: 10, hour: 10, minute: 0 }).toJSDate(),
-    end: lastMonth.set({ day: 10, hour: 11, minute: 0 }).toJSDate(),
+    start: new Date(2025, 6, 1, 10, 0),   // July 1, 2025, 10:00 AM
+    end: new Date(2025, 6, 1, 11, 0),     // July 1, 2025, 11:00 AM
   },
   {
     title: "Tech Talk: TypeScript",
-    start: lastMonth.set({ day: 15, hour: 14, minute: 0 }).toJSDate(),
-    end: lastMonth.set({ day: 15, hour: 15, minute: 0 }).toJSDate(),
+    start: new Date(2025, 6, 2, 14, 0),   // July 2, 2025, 2:00 PM
+    end: new Date(2025, 6, 2, 15, 0),     // July 2, 2025, 3:00 PM
   },
-  // This month
   {
     title: "Daily Standup",
-    start: now.set({ day: 10, hour: 9, minute: 0 }).toJSDate(),
-    end: now.set({ day: 10, hour: 9, minute: 30 }).toJSDate(),
+    start: new Date(2025, 6, 3, 9, 0),    // July 3, 2025, 9:00 AM
+    end: new Date(2025, 6, 3, 9, 30),     // July 3, 2025, 9:30 AM
   },
   {
     title: "Sprint Retrospective",
-    start: now.set({ day: 11, hour: 15, minute: 0 }).toJSDate(),
-    end: now.set({ day: 11, hour: 16, minute: 0 }).toJSDate(),
+    start: new Date(2025, 6, 4, 15, 0),   // July 4, 2025, 3:00 PM
+    end: new Date(2025, 6, 4, 16, 0),     // July 4, 2025, 4:00 PM
   },
   {
     title: "Architecture Discussion",
-    start: now.set({ day: 12, hour: 11, minute: 0 }).toJSDate(),
-    end: now.set({ day: 12, hour: 14, minute: 0 }).toJSDate(),
+    start: new Date(2025, 6, 7, 11, 0),   // July 7, 2025, 11:00 AM
+    end: new Date(2025, 6, 7, 14, 0),     // July 7, 2025, 2:00 PM
   },
   {
     title: "Tech Talk: React Performance",
-    start: now.set({ day: 13, hour: 14, minute: 0 }).toJSDate(),
-    end: now.set({ day: 13, hour: 15, minute: 0 }).toJSDate(),
+    start: new Date(2025, 6, 8, 14, 0),   // July 8, 2025, 2:00 PM
+    end: new Date(2025, 6, 8, 15, 0),     // July 8, 2025, 3:00 PM
   },
   {
     title: "Client Demo",
-    start: now.set({ day: 14, hour: 10, minute: 0 }).toJSDate(),
-    end: now.set({ day: 14, hour: 11, minute: 0 }).toJSDate(),
+    start: new Date(2025, 6, 9, 10, 0),   // July 9, 2025, 10:00 AM
+    end: new Date(2025, 6, 9, 11, 0),     // July 9, 2025, 11:00 AM
   },
-  // Next month
   {
     title: "Quarterly Review",
-    start: nextMonth.set({ day: 5, hour: 13, minute: 0 }).toJSDate(),
-    end: nextMonth.set({ day: 5, hour: 14, minute: 30 }).toJSDate(),
+    start: new Date(2025, 6, 10, 13, 0),  // July 10, 2025, 1:00 PM
+    end: new Date(2025, 6, 10, 14, 30),   // July 10, 2025, 2:30 PM
   },
   {
     title: "All Hands Meeting",
-    start: nextMonth.set({ day: 10, hour: 16, minute: 0 }).toJSDate(),
-    end: nextMonth.set({ day: 10, hour: 17, minute: 0 }).toJSDate(),
+    start: new Date(2025, 6, 11, 16, 0),  // July 11, 2025, 4:00 PM
+    end: new Date(2025, 6, 11, 17, 0),    // July 11, 2025, 5:00 PM
   },
   {
     title: "Retrospective",
-    start: nextMonth.set({ day: 15, hour: 15, minute: 0 }).toJSDate(),
-    end: nextMonth.set({ day: 15, hour: 16, minute: 0 }).toJSDate(),
+    start: new Date(2025, 6, 14, 15, 0),  // July 14, 2025, 3:00 PM
+    end: new Date(2025, 6, 14, 16, 0),    // July 14, 2025, 4:00 PM
   },
   {
     title: "Tech Talk: Microservices",
-    start: nextMonth.set({ day: 20, hour: 11, minute: 0 }).toJSDate(),
-    end: nextMonth.set({ day: 20, hour: 12, minute: 0 }).toJSDate(),
+    start: new Date(2025, 6, 15, 11, 0),  // July 15, 2025, 11:00 AM
+    end: new Date(2025, 6, 15, 12, 0),    // July 15, 2025, 12:00 PM
   },
 ];
