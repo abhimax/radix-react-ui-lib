@@ -1,5 +1,13 @@
 # Radix React UI Component Library Changelog
 
+# [1.3.0](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.10...v1.3.0) (2025-07-03)
+
+
+### Features
+
+* change primary color ([9bf894a](https://github.com/abhimax/radix-react-ui-lib/commit/9bf894af46f4ff68707e689dc802213297fe5c00))
+* primary color change ([8fce1c2](https://github.com/abhimax/radix-react-ui-lib/commit/8fce1c2893ccac6f66552762c0dd940fd437b27b))
+
 # [1.3.0-beta.1](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.10...v1.3.0-beta.1) (2025-07-03)
 
 
