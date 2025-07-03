@@ -1,5 +1,13 @@
 # Radix React UI Component Library Changelog
 
+## [1.2.10-beta.1](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.9...v1.2.10-beta.1) (2025-07-03)
+
+
+### Bug Fixes
+
+* add permissions section to create-release workflow ([3f56098](https://github.com/abhimax/radix-react-ui-lib/commit/3f560981845cd3b07a18d389c682e5d8f33d0ba5))
+* update primary and accent color variables for consistency ([f5b63d4](https://github.com/abhimax/radix-react-ui-lib/commit/f5b63d4f271ef410e46c781e9d93105bda544c41))
+
 ## [1.2.9](https://github.com/abhimax/radix-react-ui-lib/compare/v1.2.8...v1.2.9) (2025-06-24)
 
 
