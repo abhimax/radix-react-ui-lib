@@ -8,7 +8,18 @@ const releasesFilePath = path.join(__dirname, '../releases-page/releases.json');
 async function fetchReleasesFromGitHub() {
     try {
         const result = await $`gh release list --repo abhimax/radix-react-ui-lib --json tagName,publishedAt --jq ".[] | {tag_name: .tagName, publishedAt: .publishedAt}"`;
-        const releases = JSON.parse(result.stdout);
+        console.log('Raw output from gh CLI:', result);
+        console.log('Raw output from gh CLI stdout:', result.stdout);
+
+        // Validate if the output is valid JSON
+        let releases;
+        try {
+            releases = JSON.parse(result.stdout);
+        } catch (parseError) {
+            console.error('Failed to parse JSON from gh CLI output:', parseError);
+            console.error('Raw output causing the error:', result.stdout);
+            process.exit(1);
+        }
 
         return releases.map(release => ({
             version: release.tag_name,
