@@ -7,9 +7,9 @@ const releasesFilePath = path.join(__dirname, '../releases-page/releases.json');
 
 async function fetchReleasesFromGitHub() {
     try {
-        const result = await $`gh release list --repo abhimax/radix-react-ui-lib --json name,publishedAt --jq ".[] | {name: .name, publishedAt: .publishedAt}"`;
+        const result = await $`gh release list --repo abhimax/radix-react-ui-lib --json name,publishedAt`;
         console.log('Raw output from gh CLI:', result);
-        console.log('Raw output from gh CLI stdout:', result.stdout);
+        // console.log('Raw output from gh CLI stdout:', result.stdout);
 
         // Validate if the output is valid JSON
         let releases;
