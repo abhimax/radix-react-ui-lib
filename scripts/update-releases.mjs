@@ -22,7 +22,7 @@ async function fetchReleasesFromGitHub() {
         }
 
         return releases.map(release => ({
-            version: release.tag_name,
+            version: release.name,
             date: release.publishedAt.split('T')[0],
             storybookUrl: `https://canopy-ui-storybook.dev.raintreeinc.com/${release.tag_name}/index.html`
         }));
@@ -37,7 +37,7 @@ async function updateReleasesFile() {
 
     try {
         fs.writeFileSync(releasesFilePath, JSON.stringify(releases, null, 4), 'utf-8');
-        console.log('Releases updated successfully.');
+        console.log('Releases updated successfully: ', releases);
     } catch (error) {
         console.error('Error writing to releases.json:', error);
         process.exit(1);
