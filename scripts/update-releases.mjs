@@ -22,7 +22,7 @@ async function fetchReleasesFromGitHub() {
         }
 
         return releases.map(release => ({
-            version: release.name,
+            version: release.name.startsWith('v') ? release.name.slice(1) : release.name,
             date: release.publishedAt.split('T')[0],
             storybookUrl: `https://canopy-ui-storybook.dev.raintreeinc.com/${release.tag_name}/index.html`
         }));
