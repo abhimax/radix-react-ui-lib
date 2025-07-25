@@ -1,0 +1,33 @@
+name: Release generation
+run-name: Release generation
+on:
+  push:
+    branches:
+      - feature/*
+permissions:
+  contents: write
+  id-token: write
+  issues: write
+  discussions: write
+  packages: write
+  pages: write
+  pull-requests: write
+  security-events: write
+  statuses: write
+  checks: write
+  deployments: write
+
+jobs:
+  create_release:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Set up Node
+          uses: actions/setup-node@v4
+          with:
+            node-version: 22
+          
+        - name: Generate versions
+          run: |
+            npm i -g zx
+            zx ./scripts/update-releases.mjs
+            cat ./releases-page/releases.json

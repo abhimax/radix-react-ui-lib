@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canopy UI Library Releases</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Updated to a light gray background */
+        }
+        header {
+            background-color: #003366; /* Raintree Inc primary color */
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .release {
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 1rem;
+        }
+        .release:last-child {
+            border-bottom: none;
+        }
+        .release h2 {
+            margin: 0 0 0.5rem;
+            font-size: 1.25rem;
+            color: #003366; /* Raintree Inc primary color */
+        }
+        .release p {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+        .release a {
+            color: #0066cc; /* Raintree Inc secondary color */
+            text-decoration: none;
+        }
+        .release a:hover {
+            text-decoration: underline;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            background: #e6f2ff; /* Light blue background for pagination */
+        }
+        .pagination button {
+            background: #003366; /* Raintree Inc primary color */
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .pagination button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Canopy UI Library Releases</h1>
+    </header>
+    <div class="container" id="releases-container">
+        <!-- Releases will be dynamically loaded here -->
+    </div>
+    <div class="pagination" id="pagination-controls">
+        <button id="prev-page" disabled>Previous</button>
+        <button id="next-page">Next</button>
+    </div>
+
+    <script>
+        let releases = [];
+        const releasesPerPage = 5; // Updated to display 5 items per page
+        let currentPage = 1;
+
+        async function fetchReleases() {
+            try {
+                const response = await fetch('releases.json');
+                releases = await response.json();
+
+                // Sort releases by version number in descending order
+                releases.sort((a, b) => {
+                    const versionA = a.version.split('.').map(Number);
+                    const versionB = b.version.split('.').map(Number);
+
+                    for (let i = 0; i < Math.max(versionA.length, versionB.length); i++) {
+                        const numA = versionA[i] || 0;
+                        const numB = versionB[i] || 0;
+                        if (numA !== numB) {
+                            return numB - numA;
+                        }
+                    }
+                    return 0;
+                });
+
+                renderReleases();
+            } catch (error) {
+                console.error('Failed to fetch releases:', error);
+            }
+        }
+
+        function renderReleases() {
+            const container = document.getElementById('releases-container');
+            container.innerHTML = '';
+
+            const start = (currentPage - 1) * releasesPerPage;
+            const end = start + releasesPerPage;
+            const currentReleases = releases.slice(start, end);
+
+            currentReleases.forEach(release => {
+                const releaseDiv = document.createElement('div');
+                releaseDiv.className = 'release';
+                releaseDiv.innerHTML = `
+                    <h2>Version ${release.version}</h2>
+                    <p>Release Date: ${release.date}</p>
+                    <a href="${release.storybookUrl}" target="_blank">View Storybook</a>
+                `;
+                container.appendChild(releaseDiv);
+            });
+
+            document.getElementById('prev-page').disabled = currentPage === 1;
+            document.getElementById('next-page').disabled = end >= releases.length;
+        }
+
+        document.getElementById('prev-page').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderReleases();
+            }
+        });
+
+        document.getElementById('next-page').addEventListener('click', () => {
+            if (currentPage * releasesPerPage < releases.length) {
+                currentPage++;
+                renderReleases();
+            }
+        });
+
+        fetchReleases();
+    </script>
+</body>
+</html>
